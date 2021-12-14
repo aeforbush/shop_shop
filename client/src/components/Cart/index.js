@@ -9,7 +9,7 @@ import "./style.css";
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
-  console.log(state);
+  // console.log(state);
 
   function toggleCart() {
     dispatch({ type: TOGGLE_CART });

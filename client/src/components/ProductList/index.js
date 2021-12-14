@@ -11,7 +11,7 @@ function ProductList() {
   const [state, dispatch] = useStoreContext();
   const { currentCategory } = state;
   const { loading, data } = useQuery(QUERY_PRODUCTS);
-  const { products } = state;
+
 
   useEffect(() => {
     if (data) {
