@@ -15,7 +15,7 @@ const CartItem = ({ item }) => {
   // Anytime an <input> element's value changes, an onChange event will occur. We can capture that event and send the element's new value to the reducer.
   const onChange = (e) => {
     const value = e.target.value;
-
+    console.log(value);
     if (value === "0") {
       dispatch({
         type: REMOVE_FROM_CART,
@@ -24,7 +24,7 @@ const CartItem = ({ item }) => {
     } else {
       dispatch({
         type: UPDATE_CART_QUANTITY,
-        _id: item.id,
+        _id: item._id,
         purchaseQuantity: parseInt(value),
       });
     }
